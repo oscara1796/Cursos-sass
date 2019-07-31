@@ -1,3 +1,22 @@
 // --------------------------------------------------
             // $Botones
 // --------------------------------------
+
+.btn{
+  display: inline-block;
+  color: $buttoncolor;
+  background-color: $buttonbackgroundcolor;
+  line-height: 2.5px;
+  border-radius: $borderradius;
+  font-size: $buttonfontsize;
+  &__icon{
+    font-size: 10px;
+  }
+  &--info{
+    background-color: $color-info;
+  }
+
+}
+
+
+// Clase btn
