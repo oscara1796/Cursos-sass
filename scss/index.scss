@@ -1,0 +1,8 @@
+@import "lib/variables";
+
+@import "layout/page-layout";
+
+h1{
+	color: $color-brand;
+	font-family: $font-titles;
+}
