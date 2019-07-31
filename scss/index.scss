@@ -1,8 +1,11 @@
 @import "lib/variables";
 
-@import "layout/page-layout";
+// Elementos del layout
+@import "layout/buttons";
+@import "layout/links";
+@import "layout/tipografia";
 
-h1{
-	color: $color-brand;
-	font-family: $font-titles;
-}
+
+// Componentes
+@import "components/page-layout";
+@import "components/utilities";
