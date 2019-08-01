@@ -1,0 +1,16 @@
+// --------------------------------------------------
+            // $mixins
+// --------------------------------------
+
+
+@mixin content-center($display: flex){
+  display: $display;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin respond-to($breakpoint: $lg-port){
+  @media only screen and (min-width: $breakpoint){
+      @content;
+  }
+}

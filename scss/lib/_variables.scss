@@ -22,6 +22,7 @@ $color-succes: rgb(91,183,91);
 $lg-port: 992px;
 $md-port: 768px;
 $sm-port: 576px;
+$presentation: 70vh;
 
 // typography fonts
 
@@ -29,6 +30,7 @@ $base-font: "Quicksand", sans-serif;
 $font-page: Arial;
 $font-titles: Georgia;
 $font-smalltext: "Times New Roman";
+$font-weight: bold;
 
 // font size
 $subtitles: 10px;
@@ -47,6 +49,7 @@ $padding-section: 20px 20px;
 $buttoncolor: $color-white;
 $buttonbackgroundcolor: $color-brand;
 $buttonfontsize: $basefontsize * 1.5;
+$padding-button: 15px 20px;
 
 
 // Constantes

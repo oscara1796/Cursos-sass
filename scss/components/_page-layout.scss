@@ -1,0 +1,72 @@
+// --------------------------------------------------
+            // $Layout
+// --------------------------------------
+
+body{
+  font-family: $font-page;
+  margin: 0;
+  padding: 0;
+}
+
+// Empieza la cabecera
+
+.cabecera{
+  background-color: $color-white;
+}
+
+.cabecera nav{
+  width: 100%;
+}
+
+.cabecera ul{
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.cabecera li{
+  list-style: none;
+  display:  inline-block;
+  margin: 5px 5px;
+}
+
+.cabecera li a{
+  text-decoration: none;
+  color: $color-black;
+  font-size: $basefontsize;
+  font-weight: $font-weight;
+}
+
+
+// Aqui acaba la cabecera
+
+
+.portada{
+  height: $presentation;
+  position: relative;
+  padding: $padding-section;
+  &__img{
+    margin: 0;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 90%;
+  }
+  &__text{
+    color: $color-white;
+    @include content-center(flex);
+  }
+  &__text__button{
+    color:$color-black;
+    background-color: $color-white;
+    padding: $padding-button;
+    text-decoration: none;
+    border: none;
+  }
+
+}
