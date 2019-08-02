@@ -12,15 +12,22 @@ body{
 
 .cabecera{
   background-color: $color-white;
+  position: sticky;
+  top:0;
+  padding: 20px 0px;
+  z-index: 2;
 }
 
 .cabecera nav{
   width: 100%;
+
 }
 
 .cabecera ul{
   margin-left: 0;
   padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .cabecera li{
@@ -34,6 +41,9 @@ body{
   color: $color-black;
   font-size: $basefontsize;
   font-weight: $font-weight;
+  &:hover{
+    color: $color-gray;
+  }
 }
 
 
@@ -44,6 +54,12 @@ body{
   height: $presentation;
   position: relative;
   padding: $padding-section;
+  display: flex;
+  justify-content: flex-end;
+  @include respond-to($md-port){
+    justify-content: center;
+    align-items: center;
+    }
   &__img{
     margin: 0;
     position: absolute;
@@ -56,10 +72,17 @@ body{
     width: 100%;
     object-fit: cover;
     object-position: 50% 90%;
+    filter: brightness(50%);
   }
   &__text{
     color: $color-white;
     @include content-center(flex);
+    align-items: flex-start;
+    width: 50%;
+    @include respond-to($md-port){
+      align-items: center;
+      width: 100%;}
+
   }
   &__text__button{
     color:$color-black;
@@ -67,6 +90,35 @@ body{
     padding: $padding-button;
     text-decoration: none;
     border: none;
+    margin-top: 20px;
+    font-weight: $font-weight;
+    border-radius: 5px;
+    align-self: flex-end;
+    margin-right: 50px;
+    @include respond-to($md-port){
+      align-self: center;
+      width: 100%;
+      margin-right: 0;}
   }
 
+  &__text__button:hover{
+    background-color: rgb(255,255,255,.40);
+
+  }
+
+}
+
+// Aqui acaba la portada
+
+.ventajas-section{
+  @include content-center(flex);
+}
+
+.__container_ventajas{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 50px;
+  @include respond-to($md-port){
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

@@ -6,6 +6,10 @@ body {
 
 .cabecera {
   background-color: white;
+  position: sticky;
+  top: 0;
+  padding: 20px 0px;
+  z-index: 2;
 }
 
 .cabecera nav {
@@ -15,6 +19,8 @@ body {
 .cabecera ul {
   margin-left: 0;
   padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .cabecera li {
@@ -29,11 +35,22 @@ body {
   font-size: 16px;
   font-weight: bold;
 }
+.cabecera li a:hover {
+  color: #737373;
+}
 
 .portada {
   height: 70vh;
   position: relative;
   padding: 20px 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+@media only screen and (max-width: 768px) {
+  .portada {
+    justify-content: center;
+    align-items: center;
+  }
 }
 .portada__img {
   margin: 0;
@@ -47,12 +64,21 @@ body {
   width: 100%;
   object-fit: cover;
   object-position: 50% 90%;
+  filter: brightness(50%);
 }
 .portada__text {
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-items: flex-start;
+  width: 50%;
+}
+@media only screen and (max-width: 768px) {
+  .portada__text {
+    align-items: center;
+    width: 100%;
+  }
 }
 .portada__text__button {
   color: black;
@@ -60,6 +86,33 @@ body {
   padding: 15px 20px;
   text-decoration: none;
   border: none;
+  margin-top: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  align-self: flex-end;
+  margin-right: 50px;
+}
+@media only screen and (max-width: 768px) {
+  .portada__text__button {
+    align-self: center;
+    width: 100%;
+    margin-right: 0;
+  }
+}
+.portada__text__button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.ventajas-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.__container_ventajas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -10,7 +10,7 @@
 }
 
 @mixin respond-to($breakpoint: $lg-port){
-  @media only screen and (min-width: $breakpoint){
+  @media only screen and (max-width: $breakpoint){
       @content;
   }
 }
